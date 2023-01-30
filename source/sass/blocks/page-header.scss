@@ -1,11 +1,12 @@
 .page-header {
   display: flex;
-  background-color: lightblue;
+  justify-content: space-between;
+  margin: 0 -50px;
+  padding: 10px 100px;
+  border-bottom: 1px solid rgba(168, 168, 168, 0.4);
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
+
   }
 }
 
-.daily-pay__icon {
-  fill: white;
-}

@@ -4,7 +4,7 @@
   align-items: flex-start;
   background-color: lightcoral;
 
-  @media (min-width: $tablet-width) {
+  @media (max-width: $tablet-width) {
     flex-direction: row;
   }
 }

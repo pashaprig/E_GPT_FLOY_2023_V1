@@ -1,14 +1,47 @@
 /* Fonts */
 
-//Montserrat
+//GraphikLCG
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "GraphikLCG";
   font-style: normal;
   font-weight: 400;
   font-display: swap;
-  src: local("Montserrat Regular"),
-    url("../fonts/montserrat/Montserrat-Regular400.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-Regular400.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-Regular400.ttf") format("truetype");
+  src: local("GraphikLCG Regular"),
+    url("../fonts/graphikLCG/GraphikLCG-Regular.woff2") format("woff2"),
+    url("../fonts/graphikLCG/GraphikLCG-Regular.woff") format("woff"),
+    url("../fonts/graphikLCG/GraphikLCG-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GraphikLCG";
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: local("GraphikLCG Medium"),
+    url("../fonts/graphikLCG/GraphikLCG-Medium.woff2") format("woff2"),
+    url("../fonts/graphikLCG/GraphikLCG-Medium.woff") format("woff"),
+    url("../fonts/graphikLCG/GraphikLCG-Medium.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GraphikLCG";
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: local("GraphikLCG Semibold"),
+    url("../fonts/graphikLCG/GraphikLCG-Semibold.woff2") format("woff2"),
+    url("../fonts/graphikLCG/GraphikLCG-Semibold.woff") format("woff"),
+    url("../fonts/graphikLCG/GraphikLCG-Semibold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "GraphikLCG";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("GraphikLCG Bold"),
+    url("../fonts/graphikLCG/GraphikLCG-Bold.woff2") format("woff2"),
+    url("../fonts/graphikLCG/GraphikLCG-Bold.woff") format("woff"),
+    url("../fonts/graphikLCG/GraphikLCG-Bold.ttf") format("truetype");
 }
