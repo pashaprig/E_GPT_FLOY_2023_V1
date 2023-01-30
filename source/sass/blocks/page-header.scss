@@ -1,0 +1,11 @@
+.page-header {
+  display: flex;
+  background-color: lightblue;
+
+  @media (min-width: $tablet-width) {
+  }
+}
+
+.daily-pay__icon {
+  fill: white;
+}
