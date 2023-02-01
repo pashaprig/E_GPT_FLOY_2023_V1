@@ -5,6 +5,7 @@
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
+    border-bottom: none;
   }
 }
 
@@ -28,6 +29,7 @@
       min-width: unset;
       padding: 60px 0;
       background: 50% no-repeat url(../img/form-wrapper-bcg-mob.png);
+      border-left: none;
     }
   }
 }

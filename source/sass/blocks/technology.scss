@@ -1,0 +1,128 @@
+.technology {
+  margin-left: -51px;
+  padding: 40px 40px 40px 91px;
+  height: 1000px;
+  background: 50% 100% no-repeat url(../img/technology-bcg.png);
+
+  @media (max-width: $tablet-width) {
+    height: unset;
+    margin-left: 0;
+    padding: 10px 30px 70px;
+    background-size: contain;
+  }
+}
+
+.technology__heading {
+  display: flex;
+  margin-bottom: 30px;
+  padding-right: 370px;
+  font-weight: 700;
+  font-size: 66px;
+  line-height: 80px;
+  text-transform: uppercase;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+    font-size: 24px;
+    line-height: 28px;
+    padding: 0;
+  }
+}
+
+.technology__sub-heading {
+  margin-bottom: 50px;
+  padding-right: 900px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+    padding-right: 0;
+    font-size: 18px;
+    line-height: 24px;
+  }
+}
+
+.technology__time-wrapper {
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.technology__time {
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+}
+
+.technology__about-wrapper {
+  @media (max-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+}
+
+.technology__about {
+  margin-bottom: 30px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 0;
+    font-size: 15px;
+  }
+}
+
+.technology__img {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: block;
+
+    &--order-2 {
+      order: 2;
+    }
+  }
+}
+
+.technology__day {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-weight: 500;
+  font-size: 36px;
+  line-height: 40px;
+
+  & svg {
+    margin-right: 20px;
+  }
+
+  @media (max-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+
+    & svg {
+      height: 30px;
+      margin-right: 15px;
+    }
+  }
+}
+
+.technology__day-alt {
+  font-size: 20px;
+  line-height: 30px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+}

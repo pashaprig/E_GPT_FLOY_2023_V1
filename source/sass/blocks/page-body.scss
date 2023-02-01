@@ -18,6 +18,7 @@
 }
 
 .page-body__left-frame {
+  z-index: 1;
   min-width: 50px;
   min-height: 100%;
   border-right: $regular-border;
