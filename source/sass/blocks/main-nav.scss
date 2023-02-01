@@ -93,13 +93,13 @@
       display: flex;
       align-items: center;
       height: 50px;
-      width: 100vw;
+      min-width: 100vw;
       margin-bottom: 0;
       padding: 0;
       padding-left: 30px;
       justify-content: space-between;
-      border-top: 1px solid $nav-gooter-border;
-      border-bottom: 1px solid $nav-gooter-border;
+      border-top: $regular-border;
+      border-bottom: $regular-border;
     }
 
     &:hover {
@@ -124,7 +124,7 @@
   width: 40px;
   height: 40px;
   border: none;
-  border-left: 1px solid rgba(168, 168, 168, 0.4);
+  border-left: $regular-border;
   background: none;
   cursor: pointer;
 
@@ -177,18 +177,6 @@
     font-size: 14px;
     line-height: 120%;
   }
-}
-
-.main-nav__corp-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 47px;
-  height: 100%;
-  padding: 0;
-  background: none;
-  border: none;
-  border-left: 1px solid $nav-gooter-border;
 }
 
 .main-nav__corp {

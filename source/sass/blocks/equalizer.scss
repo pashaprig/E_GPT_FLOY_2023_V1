@@ -1,0 +1,29 @@
+.equalizer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  background: none;
+  border: none;
+
+  &--nav {
+    width: 47px;
+    height: 100%;
+    border-left: $regular-border;
+
+    & svg {
+      fill: $basic-white;
+    }
+  }
+
+  &--black {
+    position: absolute;
+    bottom: 25px;
+    left: -38px;
+    align-items: start;
+
+    & svg {
+      fill: $basic-black;
+    }
+  }
+}

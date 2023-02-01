@@ -1,13 +1,13 @@
 .page-body {
   box-sizing: border-box;
   display: flex;
-  max-width: 1920px;
-  margin: 20px;
+  max-width: 1440px;
+  margin: 0px auto;
   font-family: "GraphikLCG", "Arial", sans-serif;
   font-weight: 400;
   font-size: 24px;
   line-height: 32px;
-  border: 1px solid rgba(168, 168, 168, 0.4);
+  border: $regular-border;
   border-radius: 20px;
 
   @media (max-width: $tablet-width) {
@@ -18,9 +18,9 @@
 }
 
 .page-body__left-frame {
-  width: 50px;
+  min-width: 50px;
   min-height: 100%;
-  border-right: 1px solid rgba(168, 168, 168, 0.4);
+  border-right: $regular-border;
 
   @media (max-width: $tablet-width) {
     display: none;

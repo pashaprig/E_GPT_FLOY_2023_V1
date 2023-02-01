@@ -1,14 +1,15 @@
 .page-header {
+  box-sizing: border-box;
   position: relative;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  max-width: calc(100% + 51px);
   margin-left: -51px;
-  padding: 10px 100px 10px 150px;
-  border-bottom: 1px solid rgba(168, 168, 168, 0.4);
+  padding: 10px 100px 10px;
+  border-bottom: $regular-border;
 
   @media (max-width: $tablet-width) {
-    box-sizing: border-box;
     max-height: 40px;
     margin-left: 0;
     padding: 10px 30px;

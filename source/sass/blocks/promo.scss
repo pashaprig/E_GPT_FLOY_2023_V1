@@ -1,0 +1,117 @@
+.promo {
+  position: relative;
+  display: flex;
+  border-bottom: $regular-border;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+  }
+}
+
+.promo__wrapper {
+  display: flex;
+  flex-direction: column;
+
+  &--form-wrapper {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 460px;
+    padding: 80px;
+    background: 50% no-repeat url(../img/form-wrapper-bcg.png);
+    border-left: $regular-border;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--form-wrapper {
+      min-width: unset;
+      padding: 60px 0;
+      background: 50% no-repeat url(../img/form-wrapper-bcg-mob.png);
+    }
+  }
+}
+
+.promo__heading {
+  display: flex;
+  padding: 40px;
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 55px;
+  text-transform: uppercase;
+  border-bottom: $regular-border;
+
+  @media (max-width: $tablet-width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 15px 30px;
+  }
+}
+
+.promo__users-wrapper {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding: 30px;
+  }
+}
+
+.promo__users {
+  max-width: 35%;
+  @media (max-width: $tablet-width) {
+    order: 2;
+    display: flex;
+    align-items: center;
+    max-width: unset;
+  }
+}
+
+.promo__img {
+  margin-bottom: 20px;
+
+  @media (max-width: $tablet-width) {
+    order: 2;
+    width: 110px;
+    height: 84px;
+    margin-bottom: 0;
+  }
+}
+
+.promo__users-number {
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 14px;
+    line-height: 36px;
+  }
+}
+
+.promo__about {
+  margin-top: 40px;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 8px;
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+.promo__video {
+  display: flex;
+  align-items: end;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 25px;
+    img {
+      width: 100%;
+    }
+  }
+}
