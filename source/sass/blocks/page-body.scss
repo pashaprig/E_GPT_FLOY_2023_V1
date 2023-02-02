@@ -8,6 +8,7 @@
   font-size: 24px;
   line-height: 32px;
   border: $regular-border;
+  border-left: none;
   border-radius: 20px;
 
   @media (max-width: $tablet-width) {
@@ -22,6 +23,8 @@
   min-width: 50px;
   min-height: 100%;
   border-right: $regular-border;
+  border-left: $regular-border;
+  border-radius: 20px 0 0 20px;
 
   @media (max-width: $tablet-width) {
     display: none;

@@ -1,0 +1,148 @@
+.google {
+  margin-left: -52px;
+  padding-left: 52px;
+  color: $nav-color;
+  background: $basic-black;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    padding-left: 0;
+  }
+}
+
+.google__video-wrapper {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: $tablet-width) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.google__heading {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  padding-left: 40px;
+  padding-right: 15px;
+  height: 300px;
+  font-weight: 700;
+  font-size: 52px;
+  line-height: 66px;
+  color: $basic-white;
+  text-transform: uppercase;
+  border-bottom: $regular-border;
+
+  @media (max-width: $tablet-width) {
+    display: inline-block;
+    height: unset;
+    padding: 30px 70px 30px 30px;
+    font-size: 24px;
+    line-height: 28px;
+    border-bottom: none;
+  }
+}
+
+.google__letter {
+  &--blue {
+    color: $blue;
+  }
+
+  &--red {
+    color: $red;
+  }
+
+  &--yellow {
+    color: $yellow;
+  }
+
+  &--green {
+    color: $green;
+  }
+}
+
+.google__video-item {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 30px;
+  border-top: $google-border;
+  border-right: $google-border;
+
+  &:last-child {
+    border-right: none;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+    border-right: none;
+  }
+}
+
+.google__video-title-wrapper {
+  box-sizing: border-box;
+  height: 300px;
+  width: 100%;
+  padding: 0 15px;
+  border-bottom: $google-border;
+
+  @media (max-width: $tablet-width) {
+    height: unset;
+    padding: 40px 30px;
+    padding-bottom: 20px;
+    border-bottom: none;
+  }
+}
+
+.google__title {
+  display: block;
+  margin-bottom: 70px;
+  font-size: 16px;
+  line-height: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+    font-size: 14px;
+    line-height: 27px;
+  }
+}
+
+.google__about {
+  padding: 30px 15px;
+  font-size: 16px;
+  line-height: 22px;
+
+  @media (max-width: $tablet-width) {
+    padding: 30px;
+    padding-top: 0;
+  }
+}
+
+.google__about-dot {
+  position: absolute;
+  left: -6px;
+  bottom: -6px;
+  display: block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: $grey;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.google__img-bcg {
+  height: 308px;
+  margin: 0 100px;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.8) 100%),
+    url(../img/google-bcg.png) no-repeat 100%;
+  background-size: contain;
+
+  @media (max-width: $tablet-width) {
+    height: 100px;
+    margin: 0 30px;
+  }
+}
