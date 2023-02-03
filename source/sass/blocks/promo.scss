@@ -27,8 +27,9 @@
   @media (max-width: $tablet-width) {
     &--form-wrapper {
       min-width: unset;
-      padding: 60px 0;
-      background: 50% no-repeat url(../img/form-wrapper-bcg-mob.png);
+      padding: 40px 0;
+      padding-bottom: 0;
+      background: $basic-black no-repeat url(../img/form-wrapper-bcg-mob.png);
       border-left: none;
     }
   }

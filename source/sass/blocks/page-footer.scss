@@ -1,10 +1,110 @@
 .page-footer {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  background-color: lightcoral;
+  margin-left: -52px;
+  padding-left: 132px;
+  color: $basic-white;
+  border-radius: 0 0 20px 20px;
+  background: $basic-black;
 
   @media (max-width: $tablet-width) {
-    flex-direction: row;
+    margin-left: 0;
+    padding: 30px;
+    border-top: $regular-border;
+    border-radius: unset;
   }
+}
+
+.page-footer__policy-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.page-footer__logo__icon {
+  margin-bottom: 25px;
+  fill: $basic-white;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
+  }
+}
+
+.page-footer__rights {
+  margin-bottom: 10px;
+  font-size: 15px;
+  line-height: 24px;
+  color: $nav-color;
+  opacity: 0.3;
+
+  @media (max-width: $tablet-width) {
+    margin-top: 20px;
+    order: 3;
+    opacity: 1;
+  }
+}
+
+.page-footer__link-list {
+  display: flex;
+  gap: 30px;
+}
+
+.page-footer__link-item {
+  & a {
+    font-size: 15px;
+    line-height: 24px;
+    color: $nav-color;
+    text-decoration: underline;
+  }
+
+  @media (max-width: $tablet-width) {
+    a {
+      font-size: 14px;
+      line-height: 20px;
+    }
+  }
+}
+
+.page-footer__summary {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  max-width: 50%;
+  padding: 80px 70px;
+  padding-left: 160px;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.page-footer__heading {
+  margin-bottom: 30px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: $nav-color;
+}
+
+.page-footer__logo-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+
+  a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: max-content;
+    padding: 12px 24px;
+    font-size: 16px;
+    line-height: 20px;
+    background: $basic-white;
+    border-radius: 50px;
+  }
+}
+
+.page-footer__ai-icon {
+  fill: $basic-white;
 }
