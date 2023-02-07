@@ -1,6 +1,6 @@
 .google {
-  margin-left: -52px;
-  padding-left: 52px;
+  margin-left: -74px;
+  padding-left: 74px;
   color: $nav-color;
   background: $basic-black;
 
@@ -144,5 +144,18 @@
   @media (max-width: $tablet-width) {
     height: 100px;
     margin: 0 30px;
+  }
+}
+
+.poin {
+  animation: 0.6s infinite alternate blink;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
   }
 }

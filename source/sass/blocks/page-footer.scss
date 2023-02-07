@@ -1,9 +1,13 @@
 .page-footer {
+  position: relative;
+  box-sizing: border-box;
   display: flex;
-  margin-left: -52px;
-  padding-left: 132px;
+  align-items: center;
+  justify-content: space-around;
+  height: 300px;
+  margin-left: -74px;
+  padding-left: 154px;
   color: $basic-white;
-  border-radius: 0 0 20px 20px;
   background: $basic-black;
 
   @media (max-width: $tablet-width) {
@@ -12,6 +16,21 @@
     border-top: $regular-border;
     border-radius: unset;
   }
+}
+
+.page-footer__black {
+  position: absolute;
+  bottom: -23px;
+  left: 0;
+  width: 100%;
+  height: 23px;
+  background: $basic-black;
+}
+
+.page-footer__border {
+  margin-top: -1px;
+  margin-left: 74px;
+  border-bottom: $regular-border;
 }
 
 .page-footer__policy-wrapper {
@@ -71,7 +90,6 @@
   display: flex;
   flex-direction: column;
   max-width: 50%;
-  padding: 80px 70px;
   padding-left: 160px;
 
   @media (max-width: $tablet-width) {

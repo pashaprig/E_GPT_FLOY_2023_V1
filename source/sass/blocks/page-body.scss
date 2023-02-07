@@ -1,7 +1,8 @@
 .page-body {
   box-sizing: border-box;
   display: flex;
-  max-width: 1440px;
+  width: 100%;
+  // max-width: 1440px;
   margin: 0px auto;
   font-family: "GraphikLCG", "Arial", sans-serif;
   font-weight: 400;
@@ -22,8 +23,8 @@
   z-index: 1;
   min-width: 50px;
   min-height: 100%;
-  border-right: $regular-border;
-  border-left: $regular-border;
+  border: $regular-border;
+  border-top: none;
   border-radius: 20px 0 0 20px;
 
   @media (max-width: $tablet-width) {

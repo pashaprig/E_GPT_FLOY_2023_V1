@@ -1,8 +1,9 @@
 .technology {
-  margin-left: -52px;
-  padding: 40px 40px 0 92px;
+  margin-left: -74px;
+  padding: 40px 40px 0 116px;
   height: 1000px;
   background: 50% 100% no-repeat url(../img/technology-bcg.png);
+  background-size: cover;
 
   @media (max-width: $tablet-width) {
     height: unset;

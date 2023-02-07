@@ -102,3 +102,4 @@ const handlePotentialBtnClick = (btn) => {
   buttons.forEach(b => b.classList.remove('buttons__btn--active'));
   btn.classList.add('buttons__btn--active');
 }
+
