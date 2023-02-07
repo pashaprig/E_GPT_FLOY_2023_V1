@@ -174,7 +174,83 @@
       </section>
 
       <section class="amount">
-        314
+        <div class="amount__finance">
+          google finance
+        </div>
+        <div class="buttons buttons--mb80">
+          <div class="buttons__wrapper buttons__wrapper--p0">
+            <h3 class="buttons__subheading buttons__subheading--enlarged">Сделайте пассивный заработок простой задачей</h3>
+            <ul class="buttons__list">
+              <li class="buttons__btn-item">
+                <button class="buttons__btn buttons__btn--reverse buttons__btn--active" type="button">$314</button>
+              </li>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn buttons__btn--reverse" type="button">$567</button>
+              </li>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn buttons__btn--reverse" type="button">$980</button>
+              </li>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn buttons__btn--reverse" type="button">$1092</button>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="amount__wrapper">
+          <span class="amount__number"><g>$</g>314</span>
+          <img class="amount__img" src="../img/sam.png" width="517" height="471" alt="Спикер">
+          <div class="amount__data-wrapper">
+            <div class="amount__data">
+              <div class="amount__data-row amount__data-row--head">
+                <span class="amount__data-title">Время</span>
+                <span class="amount__data-title">Актив</span>
+                <span class="amount__data-title">Вклад</span>
+                <span class="amount__data-title">ROI</span>
+              </div>
+              <div class="amount__data-row">
+                <span class="amount__data-title">17:28:19</span>
+                <span class="amount__data-title">USD/BTC</span>
+                <span class="amount__data-title">0.176002 BTC</span>
+                <span class="amount__data-title amount__data-title--green">6.23%</span>
+              </div>
+              <div class="amount__data-row">
+                <span class="amount__data-title">17:28:18</span>
+                <span class="amount__data-title">USD/ETH</span>
+                <span class="amount__data-title">1.18111 ETH</span>
+                <span class="amount__data-title amount__data-title--green">14.85%</span>
+              </div>
+              <div class="amount__data-row">
+                <span class="amount__data-title">17:28:17</span>
+                <span class="amount__data-title">USD/LTC</span>
+                <span class="amount__data-title">61.928 LTC</span>
+                <span class="amount__data-title amount__data-title--green">7.17%</span>
+              </div>
+              <div class="amount__data-row">
+                <span class="amount__data-title">17:36:12</span>
+                <span class="amount__data-title">USD/BTC</span>
+                <span class="amount__data-title">0.09604 BTC</span>
+                <span class="amount__data-title amount__data-title--red">-0.89%</span>
+              </div>
+              <div class="amount__data-row">
+                <span class="amount__data-title">17:36:09</span>
+                <span class="amount__data-title">USD/ETH</span>
+                <span class="amount__data-title">1.1532 ETH</span>
+                <span class="amount__data-title amount__data-title--green">0.78%</span>
+              </div>
+              <div class="amount__data-row">
+                <span class="amount__data-title">17:35:20</span>
+                <span class="amount__data-title">USD/ETH</span>
+                <span class="amount__data-title">1.44859 ETH</span>
+                <span class="amount__data-title amount__data-title--green">1.02%</span>
+              </div>
+            </div>
+            <button class="amount__btn" type="button">
+              <svg class="amount__icon" width="30" height="30">
+                <use xlink:href="img/sprite.svg#arrow2"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </section>
 
       <section class="potential">
@@ -183,27 +259,28 @@
           <p class="potential__abuot">OpenAI является одной из ведущих компаний в области искусственного интеллекта и
             машинного обучения</p>
         </div>
-        <div class="potential__tabs">
-          <p class="potential__content">Эти самообучающиеся программы стали важным инструментом в различных сферах
+
+        <div class="buttons">
+          <p class="buttons__content" id="potentialContent">Эти самообучающиеся программы стали важным инструментом в различных сферах
             бизнеса и жизни с момента своего появления</p>
-          <div class="potential__buttns-wrapper">
-            <h3 class="potential__subheading">Начните инвестировать уже сейчас в революционные продукты OpenAI, такие
+          <div class="buttons__wrapper">
+            <h3 class="buttons__subheading">Начните инвестировать уже сейчас в революционные продукты OpenAI, такие
               как</h3>
-            <ul class="potential__button-list">
-              <li class="potential__btn-item">
-                <button class="potential__btn" type="button">ChatGPT</button>
+            <ul class="buttons__list">
+              <li class="buttons__btn-item">
+                <button class="buttons__btn" type="button" id="ChatGPT" onclick=handlePotentialBtnClick(this)>ChatGPT</button>
               </li>
-              <li class="potential__btn-item">
-                <button class="potential__btn" type="button">GPT-3</button>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn" type="button" id="GPT3" onclick=handlePotentialBtnClick(this)>GPT-3</button>
               </li>
-              <li class="potential__btn-item">
-                <button class="potential__btn" type="button">DALL-E 2</button>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn" type="button" id="DALLE2" onclick=handlePotentialBtnClick(this)>DALL-E 2</button>
               </li>
-              <li class="potential__btn-item">
-                <button class="potential__btn" type="button">Whisper</button>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn" type="button" id="Whisper" onclick=handlePotentialBtnClick(this)>Whisper</button>
               </li>
-              <li class="potential__btn-item">
-                <button class="potential__btn potential__btn--active" type="button">EnterpriseGPT</button>
+              <li class="buttons__btn-item">
+                <button class="buttons__btn buttons__btn--active" type="button" id="EnterpriseGPT" onclick=handlePotentialBtnClick(this)>EnterpriseGPT</button>
               </li>
             </ul>
           </div>
@@ -225,7 +302,7 @@
 
       <section class="promo">
         <div class="promo__wrapper">
-          <h2 class="promo__heading">ИИ выполняющий запрос «инвестируй выгодно»</h2>
+          <h2 class="promo__heading">Зарабатывайте на всех продуктах компании OpenAI</h2>
           <div class="promo__users-wrapper">
             <div class="promo__users">
               <img class="promo__img" src="/img/users.png" width="182" height="138" alt="Монета">
@@ -258,11 +335,6 @@
             </button>
           </form>
         </div>
-        <button class="equalizer equalizer--black" type="button" aria-label="Еквалайзер">
-          <svg width="25" height="25">
-            <use xlink:href="img/sprite.svg#equalizer"></use>
-          </svg>
-        </button>
       </section>
     </main>
 

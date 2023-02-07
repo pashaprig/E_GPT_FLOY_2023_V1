@@ -1,0 +1,113 @@
+.buttons {
+  display: flex;
+
+  &--mb80 {
+    margin-bottom: 80px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 40px 30px;
+    flex-direction: column;
+  }
+}
+
+.buttons__content {
+  box-sizing: border-box;
+  max-width: 35%;
+  padding: 100px 60px;
+  padding-left: 80px;
+  font-size: 20px;
+  line-height: 30px;
+  border-right: $regular-border;
+
+  @media (max-width: $tablet-width) {
+    order: 2;
+    max-width: unset;
+    padding: 0;
+    font-size: 17px;
+    line-height: 24px;
+    border-right: none;
+  }
+}
+
+.buttons__wrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 100px 60px;
+
+  &--p0 {
+    padding: 0;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 0;
+  }
+}
+
+.buttons__subheading {
+  margin-bottom: 60px;
+  font-weight: 600;
+  font-size: 29px;
+  line-height: 40px;
+
+  &--enlarged {
+    max-width: 80%;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 50px;
+    text-transform: uppercase;
+  }
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 30px;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.buttons__list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  @media (max-width: $tablet-width) {
+    gap: 11px;
+    margin-bottom: 30px;
+  }
+}
+
+.buttons__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: max-content;
+  padding: 14px 24px;
+  font-family: "GraphikLCG", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 20px;
+  background: transparent;
+  border: 2px solid $basic-black;
+  border-radius: 50px;
+
+  &--active {
+    background: $basic-black;
+    color: $basic-white;
+  }
+
+  &--reverse {
+    color: $basic-white;
+    border: 2px solid $basic-white;
+
+    &.buttons__btn--active {
+      background: $basic-white;
+      color: $basic-black;
+    }
+  }
+
+
+  @media (max-width: $tablet-width) {
+    padding: 14px 18px;
+    font-size: 14px;
+    line-height: 18px;
+  }
+}
