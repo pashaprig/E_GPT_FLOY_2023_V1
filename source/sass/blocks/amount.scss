@@ -4,19 +4,33 @@
   justify-content: center;
   margin-left: -74px;
   padding-right: 80px;
-  padding-bottom: 100px;
+  padding-bottom: 80px;
   padding-left: 154px;
   color: $basic-white;
   background: $basic-black;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    padding: 0;
+  }
 }
 
 .amount__finance {
-    margin-bottom: 100px;
+  margin-bottom: 100px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 40px;
+  }
 }
 
 .amount__wrapper {
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: $tablet-width) {
+    flex-direction: column;
+    padding: 0 30px 50px;
+  }
 }
 
 .amount__number {
@@ -31,6 +45,16 @@
   & g {
     color: $nav-item-hover;
   }
+
+  @media (max-width: $tablet-width) {
+    order: 3;
+    justify-content: start;
+    margin-bottom: 30px;
+    font-size: 100px;
+    line-height: 100px;
+    transform: unset;
+    writing-mode: unset;
+  }
 }
 
 .amount__btn {
@@ -42,19 +66,32 @@
   background: none;
   border: 2px solid $nav-color;
   border-radius: 50%;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .amount__data-wrapper {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 40px;
+
+  @media (max-width: $tablet-width) {
+    order: 4;
+  }
 }
 
 .amount__data {
   display: flex;
   flex-direction: column;
   gap: 5px;
+  margin-bottom: 40px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 0;
+  }
 }
 
 .amount__data-row {
@@ -66,7 +103,15 @@
   box-shadow: 0px 0px 30px rgba(0, 0, 0, 0.8);
 
   &--head {
+    margin-bottom: 5px;
     color: $nav-color;
+  }
+
+  @media (max-width: $tablet-width) {
+    box-sizing: border-box;
+    justify-content: space-around;
+    width: 100%;
+    padding: 10px;
   }
 }
 
@@ -82,5 +127,21 @@
 
   &--red {
     color: $red;
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 25%;
+    font-size: 13px;
+    line-height: 27px;
+  }
+}
+
+.amount__img {
+  @media (max-width: $tablet-width) {
+    box-sizing: border-box;
+    order: 2;
+    width: 100%;
+    height: auto;
+    margin-bottom: 30px;
   }
 }

@@ -29,10 +29,14 @@
           <li class="main-nav__item"><a href="#services">OpenAI</a></li>
           <li class="main-nav__item">
             <p class="main-nav__corp">EnterpriseGPT © 2015-2023</p>
-            <button class="equalizer equalizer--nav" type="button" aria-label="Еквалайзер">
-              <svg width="25" height="25">
-                <use xlink:href="img/sprite.svg#equalizer"></use>
-              </svg>
+            <button class="btn-equalizer" id="btn-audio-play" type="button" aria-label="Еквалайзер" onclick=handleAudioPlay()>
+              <div class="equalizer equalizer--nav">
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+                <i></i>
+              </div>
             </button>
           </li>
         </ul>
@@ -77,11 +81,18 @@
             </button>
           </form>
         </div>
-        <button class="equalizer equalizer--black" type="button" aria-label="Еквалайзер">
-          <svg width="25" height="25">
-            <use xlink:href="img/sprite.svg#equalizer"></use>
-          </svg>
+        <button class="btn-equalizer btn-equalizer--black" id="btn-audio-play" type="button" aria-label="Еквалайзер" onclick=handleAudioPlay()>
+          <div class="equalizer">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+          </div>
         </button>
+        <audio id="audio">
+          <source src="audio/egpt.mp3" type="audio/mpeg">
+        </audio>
       </section>
 
       <section class="technology">
@@ -136,7 +147,7 @@
           </div>
           <div class="google__video-item">
             <div class="google__video-title-wrapper">
-              <span class="google__title"><span class="poin">●</span> Прорыв 2023</span>
+              <span class="google__title"><span class="point">●</span> Прорыв 2023</span>
               <img class="google__video" width="260" height="146" src="../img/google-video1-prev.png" alt="Спикер">
             </div>
             <p class="google__about">Пять столетий спустя Lorem Ipsum испытал всплеск популярности с выпуском сухого
@@ -145,7 +156,7 @@
           </div>
           <div class="google__video-item">
             <div class="google__video-title-wrapper">
-              <span class="google__title"><span class="poin">●</span> Простота</span>
+              <span class="google__title"><span class="point">●</span> Простота</span>
               <img class="google__video" width="260" height="146" src="../img/google-video2-prev.png" alt="Спикер">
             </div>
             <p class="google__about">Пять столетий спустя Lorem Ipsum испытал всплеск популярности с выпуском<span
@@ -154,7 +165,7 @@
           </div>
           <div class="google__video-item">
             <div class="google__video-title-wrapper">
-              <span class="google__title"><span class="poin">●</span> Эффективность</span>
+              <span class="google__title"><span class="point">●</span> Эффективность</span>
               <img class="google__video" width="260" height="146" src="../img/google-video3-prev.png" alt="Спикер">
             </div>
             <p class="google__about">Пять столетий спустя Lorem Ipsum испытал всплеск популярности с выпуском
@@ -177,74 +188,37 @@
         <div class="amount__finance">
           google finance
         </div>
-        <div class="buttons buttons--mb80">
+        <div class="buttons buttons--amount">
           <div class="buttons__wrapper buttons__wrapper--p0">
             <h3 class="buttons__subheading buttons__subheading--enlarged">Сделайте пассивный заработок простой задачей</h3>
             <ul class="buttons__list">
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse buttons__btn--active" type="button">$314</button>
+                <button class="buttons__btn buttons__btn--reverse buttons__btn--active" type="button" id="amount314" onclick=handle314BtnClick(this)>$314</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse" type="button">$567</button>
+                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount567" onclick=handle567BtnClick(this)>$567</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse" type="button">$980</button>
+                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount980" onclick=handle980BtnClick(this)>$980</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse" type="button">$1092</button>
+                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount1092" onclick=handle1092BtnClick(this)>$1092</button>
               </li>
             </ul>
           </div>
         </div>
         <div class="amount__wrapper">
-          <span class="amount__number"><g>$</g>314</span>
+          <span class="amount__number"><g>$</g><span id="nbr">314</span></span>
           <img class="amount__img" src="../img/sam.png" width="517" height="471" alt="Спикер">
           <div class="amount__data-wrapper">
-            <div class="amount__data">
               <div class="amount__data-row amount__data-row--head">
                 <span class="amount__data-title">Время</span>
                 <span class="amount__data-title">Актив</span>
                 <span class="amount__data-title">Вклад</span>
                 <span class="amount__data-title">ROI</span>
               </div>
-              <div class="amount__data-row">
-                <span class="amount__data-title">17:28:19</span>
-                <span class="amount__data-title">USD/BTC</span>
-                <span class="amount__data-title">0.176002 BTC</span>
-                <span class="amount__data-title amount__data-title--green">6.23%</span>
-              </div>
-              <div class="amount__data-row">
-                <span class="amount__data-title">17:28:18</span>
-                <span class="amount__data-title">USD/ETH</span>
-                <span class="amount__data-title">1.18111 ETH</span>
-                <span class="amount__data-title amount__data-title--green">14.85%</span>
-              </div>
-              <div class="amount__data-row">
-                <span class="amount__data-title">17:28:17</span>
-                <span class="amount__data-title">USD/LTC</span>
-                <span class="amount__data-title">61.928 LTC</span>
-                <span class="amount__data-title amount__data-title--green">7.17%</span>
-              </div>
-              <div class="amount__data-row">
-                <span class="amount__data-title">17:36:12</span>
-                <span class="amount__data-title">USD/BTC</span>
-                <span class="amount__data-title">0.09604 BTC</span>
-                <span class="amount__data-title amount__data-title--red">-0.89%</span>
-              </div>
-              <div class="amount__data-row">
-                <span class="amount__data-title">17:36:09</span>
-                <span class="amount__data-title">USD/ETH</span>
-                <span class="amount__data-title">1.1532 ETH</span>
-                <span class="amount__data-title amount__data-title--green">0.78%</span>
-              </div>
-              <div class="amount__data-row">
-                <span class="amount__data-title">17:35:20</span>
-                <span class="amount__data-title">USD/ETH</span>
-                <span class="amount__data-title">1.44859 ETH</span>
-                <span class="amount__data-title amount__data-title--green">1.02%</span>
-              </div>
-            </div>
-            <button class="amount__btn" type="button">
+              <div class="amount__data"></div>
+            <button class="amount__btn" type="button" onclick=handleNextDataBtnClick()>
               <svg class="amount__icon" width="30" height="30">
                 <use xlink:href="img/sprite.svg#arrow2"></use>
               </svg>
@@ -367,6 +341,16 @@
       </div>
     </footer>
   </div>
+
+  <template id="similar-data-row" style="display: none">
+    <div class="amount__data-row">
+      <span class="amount__data-title" id="time">17:35:20</span>
+      <span class="amount__data-title" id="active">USD/ETH</span>
+      <span class="amount__data-title" id="sum">1.4486 ETH</span>
+      <span class="amount__data-title amount__data-title--green" id="roi">1.02%</span>
+    </div>
+  </template>
+
   <script src="js/script.min.js"></script>
 </body>
 

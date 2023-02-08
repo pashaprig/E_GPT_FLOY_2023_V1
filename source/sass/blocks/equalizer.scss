@@ -1,29 +1,89 @@
+// .equalizer {
+//   display: flex;
+//   align-items: center;
+//   justify-content: center;
+//   padding: 0;
+//   background: none;
+//   border: none;
+
+//   &--nav {
+//     width: 47px;
+//     height: 100%;
+//     border-left: $regular-border;
+//   }
+
+//   &--black {
+//     position: absolute;
+//     bottom: 25px;
+//     left: -38px;
+//     align-items: start;
+//   }
+// }
+
 .equalizer {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 0;
-  background: none;
-  border: none;
+  padding: 15px 0;
+  font-size: 0;
 
-  &--nav {
-    width: 47px;
-    height: 100%;
-    border-left: $regular-border;
+  i {
+    background-color: #fff;
+    content: '';
+    display: inline-block;
+    height: 3px;
+    width: 3px;
+    margin: 0 3px;
+    transform-origin: bottom left;
+    background-color: $basic-black;
 
-    & svg {
-      fill: $basic-white;
+    &.play {
+      height: 30px;
+      animation: move-up-and-down .3s infinite alternate;
+
+      &:nth-child(1) {
+        animation-delay: .3s;
+      }
+
+      &:nth-child(2) {
+        animation-delay: .4s;
+      }
+
+      &:nth-child(3) {
+        animation-delay: .5s;
+      }
+
+      &:nth-child(4) {
+        animation-delay: .4s;
+      }
+
+      &:nth-child(5) {
+        animation-delay: .6s;
+      }
     }
   }
+
+  &--nav i{
+    background-color: $basic-white;
+  }
+}
+
+.btn-equalizer {
+  background: none;
+  border: none;
 
   &--black {
     position: absolute;
     bottom: 25px;
-    left: -38px;
+    left: -55px;
     align-items: start;
+  }
+}
 
-    & svg {
-      fill: $basic-black;
-    }
+@keyframes move-up-and-down {
+  0% {
+    opacity: .3;
+    transform: scaleY(.05);
+  }
+  100% {
+    opacity: 1;
+    transform: scaleY(1);
   }
 }

@@ -25,12 +25,20 @@
   width: 100%;
   height: 23px;
   background: $basic-black;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-footer__border {
   margin-top: -1px;
   margin-left: 74px;
   border-bottom: $regular-border;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .page-footer__policy-wrapper {

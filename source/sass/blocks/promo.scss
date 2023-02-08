@@ -3,6 +3,11 @@
   display: flex;
   border-bottom: $regular-border;
 
+  // &:hover .equalizer,
+  // &:hover .promo__about {
+  //   animation: shake 0.5s;
+  // }
+
   @media (max-width: $tablet-width) {
     flex-direction: column;
     border-bottom: none;
@@ -42,7 +47,7 @@
       min-width: unset;
       padding: 40px 0;
       padding-bottom: 0;
-      background: $basic-black no-repeat url(../img/form-wrapper-bcg-mob.png);
+      background: 50% no-repeat url(../img/form-wrapper-bcg-mob.png);
       border-left: none;
     }
   }
@@ -130,4 +135,18 @@
       width: 100%;
     }
   }
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
 }
