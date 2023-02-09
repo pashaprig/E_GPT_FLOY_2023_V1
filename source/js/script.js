@@ -236,12 +236,30 @@ const getRowsForDataTAble = (deals) => {
   similarDataTable.appendChild(similarRowFragment);
 };
 
+const incEltNbr2 = (id, one) => {
+  elt = document.getElementById(id);
+  endNbr = Number(document.getElementById(id).innerHTML);
+  incNbrRec2(0, endNbr, elt, one);
+}
+
+/*A recursive function to increase the number.*/
+const incNbrRec2 = (i, endNbr, elt, one) => {
+  if (i <= endNbr) {
+    elt.innerHTML = i + one;
+    setTimeout(() => {//Delay a bit before calling the function again.
+      incNbrRec2(i + 10, endNbr, elt, one);
+    }, speed);
+  }
+}
+
 const handle314BtnClick = (btn) => {
   activeData = 1;
   amountButtons.forEach(b => b.classList.remove('buttons__btn--active'));
   btn.classList.add('buttons__btn--active');
   similarDataTable.textContent = '';
   getRowsForDataTAble(deals314);
+  document.querySelector('#nbr').textContent = '314';
+  incEltNbr2("nbr", 4)
 }
 
 const handle567BtnClick = (btn) => {
@@ -250,6 +268,8 @@ const handle567BtnClick = (btn) => {
   btn.classList.add('buttons__btn--active');
   similarDataTable.textContent = '';
   getRowsForDataTAble(deals567);
+  document.querySelector('#nbr').textContent = '567';
+  incEltNbr2("nbr", 7)
 }
 
 const handle980BtnClick = (btn) => {
@@ -258,6 +278,8 @@ const handle980BtnClick = (btn) => {
   btn.classList.add('buttons__btn--active');
   similarDataTable.textContent = '';
   getRowsForDataTAble(deals980);
+  document.querySelector('#nbr').textContent = '980';
+  incEltNbr2("nbr", 0)
 }
 
 const handle1092BtnClick = (btn) => {
@@ -266,6 +288,8 @@ const handle1092BtnClick = (btn) => {
   btn.classList.add('buttons__btn--active');
   similarDataTable.textContent = '';
   getRowsForDataTAble(deals1092);
+  document.querySelector('#nbr').textContent = '1092';
+  incEltNbr2("nbr", 2)
 }
 
 const initData = (activeData) => {
@@ -292,42 +316,33 @@ const handleNextDataBtnClick = () => {
   }
 }
 
-setInterval(handleNextDataBtnClick, 4000)
+setInterval(handleNextDataBtnClick, 5000)
 
 //Increase Number Animation
-var speed = 10;
+var speed = 1;
 
 /* Call this function with a string containing the ID name to
  * the element containing the number you want to do a count animation on.*/
-function incEltNbr(id) {
+const incEltNbr = (id) => {
   elt = document.getElementById(id);
   endNbr = Number(document.getElementById(id).innerHTML);
   incNbrRec(0, endNbr, elt);
 }
 
 /*A recursive function to increase the number.*/
-function incNbrRec(i, endNbr, elt) {
+const incNbrRec = (i, endNbr, elt) => {
   if (i <= endNbr) {
     elt.innerHTML = i;
-    setTimeout(function() {//Delay a bit before calling the function again.
-      incNbrRec(i + 1, endNbr, elt);
+    setTimeout(() => {//Delay a bit before calling the function again.
+      incNbrRec(i + 1000, endNbr, elt);
     }, speed);
   }
 }
 
-// var waypoint = new Waypoint({
-//   element: document.getElementById('nbr'),
-//   handler: function(direction) {
-//     console.log('Scrolled to waypoint!')
-//   }
-// })
-
-// document.querySelector('#nbr').waypoint(function() {
-//   alert('you have scrolled to the h1!');
-//  });
+incEltNbr("users-number1")
+incEltNbr("users-number2")
 
 
-incEltNbr("nbr"); /*Call this funtion with the ID-name for that element to increase the number within*/
 
 // Text for potential block
 const CHATGPT = 'ChatGPT';
