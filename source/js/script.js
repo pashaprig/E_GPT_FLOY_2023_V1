@@ -404,3 +404,126 @@ if (window.innerWidth > 767) {
     div_a.style.left = (1 + (event.clientX / 100)) + "px";
   });
 }
+
+
+/* ------------------------------------------------------------------------ *
+4 states per letter: Transparent | Line | Block | Visible.
+These states are shuffled for a unique "decode" effect each time.
+* ------------------------------------------------------------------------ */
+
+function decodeText(){
+  const text1 = document.getElementsByClassName('decode-text')[0];
+  const text2 = document.getElementsByClassName('decode-text')[1];
+  const text3 = document.getElementsByClassName('decode-text')[2];
+
+  // debug with
+  // console.log(text, text.children.length);
+
+  // assign the placeholder array its places
+  var state1 = [];
+  var state2 = [];
+  var state3 = [];
+  for(var i = 0, j = text1.children.length; i < j; i++ ){
+      text1.children[i].classList.remove('state-1','state-2','state-3');
+      state1[i] = i;
+  }
+
+  for(var i = 0, j = text2.children.length; i < j; i++ ){
+      text2.children[i].classList.remove('state-1','state-2','state-3');
+      state2[i] = i;
+  }
+
+  for(var i = 0, j = text3.children.length; i < j; i++ ){
+      text3.children[i].classList.remove('state-1','state-2','state-3');
+      state3[i] = i;
+  }
+
+  // shuffle the array to get new sequences each time
+  var shuffled1 = shuffle(state1);
+  var shuffled2 = shuffle(state2);
+  var shuffled3 = shuffle(state3);
+
+  for(var i = 0, j = shuffled1.length; i < j; i++ ){
+      var child = text1.children[shuffled1[i]];
+      classes = child.classList;
+
+      // fire the first one at random times
+      var state1Time = Math.round( Math.random() * (2000 - 300) ) + 50;
+      if(classes.contains('text-animation')){
+          setTimeout(firstStages.bind(null, child), state1Time);
+      }
+  }
+
+  for(var i = 0, j = shuffled2.length; i < j; i++ ){
+      var child = text2.children[shuffled2[i]];
+      classes = child.classList;
+
+      // fire the first one at random times
+      var state1Time = Math.round( Math.random() * (2000 - 300) ) + 50;
+      if(classes.contains('text-animation')){
+          setTimeout(firstStages.bind(null, child), state1Time);
+      }
+  }
+
+  for(var i = 0, j = shuffled3.length; i < j; i++ ){
+      var child = text3.children[shuffled3[i]];
+      classes = child.classList;
+
+      // fire the first one at random times
+      var state1Time = Math.round( Math.random() * (2000 - 300) ) + 50;
+      if(classes.contains('text-animation')){
+          setTimeout(firstStages.bind(null, child), state1Time);
+      }
+  }
+}
+
+// send the node for later .state changes
+function firstStages(child){
+  if( child.classList.contains('state-2') ){
+      child.classList.add('state-3');
+  } else if( child.classList.contains('state-1') ){
+      child.classList.add('state-2')
+  } else if( !child.classList.contains('state-1') ){
+      child.classList.add('state-1');
+      setTimeout(secondStages.bind(null, child), 100);
+  }
+}
+function secondStages(child){
+  if( child.classList.contains('state-1') ){
+      child.classList.add('state-2')
+      setTimeout(thirdStages.bind(null, child), 100);
+  }
+  else if( !child.classList.contains('state-1') )
+  {
+      child.classList.add('state-1')
+  }
+}
+function thirdStages(child){
+  if( child.classList.contains('state-2') ){
+      child.classList.add('state-3')
+  }
+}
+
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+  }
+  return array;
+}
+
+
+// Demo only stuff
+decodeText();
+
+// beware: refresh button can overlap this timer and cause state mixups
+setInterval(function(){ decodeText(); }, 7000);
