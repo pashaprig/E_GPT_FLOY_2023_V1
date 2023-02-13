@@ -4,13 +4,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  max-width: calc(100% + 51px);
+  max-width: calc(100% + 102px);
   margin-left: -51px;
-  padding: 10px 100px 10px;
+  margin-right: -51px;
+  padding: 10px 130px 10px;
   border-bottom: $regular-border;
 
   @media (max-width: $tablet-width) {
     max-height: 40px;
+    margin-right: 0;
     margin-left: 0;
     padding: 10px 30px;
   }

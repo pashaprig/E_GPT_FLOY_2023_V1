@@ -293,15 +293,15 @@ const handle1092BtnClick = (btn) => {
 }
 
 const initData = (activeData) => {
- if (activeData === 1) {
-  handle314BtnClick(document.querySelector('#amount314'));
- } if (activeData === 2) {
-  handle567BtnClick(document.querySelector('#amount567'));
- } if (activeData === 3) {
-  handle980BtnClick(document.querySelector('#amount980'));
- } if (activeData === 4) {
-  handle1092BtnClick(document.querySelector('#amount1092'));
- }
+  if (activeData === 1) {
+    handle314BtnClick(document.querySelector('#amount314'));
+  } if (activeData === 2) {
+    handle567BtnClick(document.querySelector('#amount567'));
+  } if (activeData === 3) {
+    handle980BtnClick(document.querySelector('#amount980'));
+  } if (activeData === 4) {
+    handle1092BtnClick(document.querySelector('#amount1092'));
+  }
 }
 
 initData(activeData);
@@ -386,4 +386,21 @@ const handleAudioPlay = () => {
     audio.pause();
     equalizers.forEach(e => e.classList.remove('play'));
   }
+}
+
+//Play video
+const playVideo = (btn) => {
+  const iframe = document.getElementById(`video${btn.id.slice(-1)}`);
+  const player = new Vimeo.Player(iframe, { controls: 1 });
+  player.play();
+  btn.style.display = 'none';
+}
+
+//Paralax
+if (window.innerWidth > 767) {
+  document.onmousemove = ((event) => {
+    var div_a = document.querySelector(".amount__img");
+    div_a.style.top = (1 + (event.clientY / 100)) + "px";
+    div_a.style.left = (1 + (event.clientX / 100)) + "px";
+  });
 }

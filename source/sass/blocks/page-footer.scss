@@ -5,12 +5,15 @@
   align-items: center;
   justify-content: space-around;
   height: 300px;
+  margin-right: -72px;
   margin-left: -74px;
+  padding-right: 154px;
   padding-left: 154px;
   color: $basic-white;
   background: $basic-black;
 
   @media (max-width: $tablet-width) {
+    margin-right: 0;
     margin-left: 0;
     padding: 30px;
     border-top: $regular-border;
@@ -33,6 +36,7 @@
 
 .page-footer__border {
   margin-top: -1px;
+  margin-right: 73px;
   margin-left: 74px;
   border-bottom: $regular-border;
 

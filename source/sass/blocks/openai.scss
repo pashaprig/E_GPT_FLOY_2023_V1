@@ -1,18 +1,19 @@
 .openai {
   display: flex;
   flex-direction: column;
+  margin-right: -72px;
   margin-left: -74px;
   color: $basic-white;
   background: $basic-black;
 
   @media (max-width: $tablet-width) {
+    margin-right: 0;
     margin-left: 0;
   }
 }
 
 .openai__heading__wrapper {
   display: flex;
-  border-bottom: $regular-border;
 
   @media (max-width: $tablet-width) {
     flex-direction: column;
@@ -51,7 +52,7 @@
 
 .openai__about {
   padding-top: 100px;
-  padding-right: 70px;
+  padding-right: 90px;
   padding-left: 80px;
   font-size: 20px;
   line-height: 30px;

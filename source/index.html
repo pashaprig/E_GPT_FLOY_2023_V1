@@ -29,7 +29,8 @@
           <li class="main-nav__item"><a href="#services">OpenAI</a></li>
           <li class="main-nav__item">
             <p class="main-nav__corp">EnterpriseGPT © 2015-2023</p>
-            <button class="btn-equalizer" id="btn-audio-play" type="button" aria-label="Еквалайзер" onclick=handleAudioPlay()>
+            <button class="btn-equalizer" id="btn-audio-play" type="button" aria-label="Еквалайзер"
+              onclick=handleAudioPlay()>
               <div class="equalizer equalizer--nav">
                 <i></i>
                 <i></i>
@@ -48,7 +49,7 @@
     <main class="main">
       <section class="promo">
         <div class="promo__wrapper">
-          <h2 class="promo__heading">ИИ выполняющий запрос «инвестируй выгодно»</h2>
+          <h2 class="promo__heading">ИИ выполняющий запрос «инвестируй&nbsp;выгодно»</h2>
           <div class="promo__users-wrapper">
             <div class="promo__users">
               <img class="promo__img" src="/img/users.png" width="182" height="138" alt="Монета">
@@ -59,11 +60,15 @@
                 </svg>
                 <span>За 5 дней</span>
                 <p class="promo__about">Посмотрите видео или запустите аудиопрезентацию, пока листаете официальный сайт
+                </p>
               </div>
-              </p>
             </div>
-            <div class="promo__video">
-              <img src="/img/video-prev.jpg" class="video" width="398" height="225" alt="Video">
+            <div class="promo__video-wrapper">
+              <div class="promo__video" style="padding:56.25% 0 0 0;position:relative;"><iframe
+                  src="https://player.vimeo.com/video/797301531?h=a4e95be452&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1"
+                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;" title="egpt.mp4"></iframe></div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
           </div>
         </div>
@@ -81,7 +86,8 @@
             </button>
           </form>
         </div>
-        <button class="btn-equalizer btn-equalizer--black" id="btn-audio-play" type="button" aria-label="Еквалайзер" onclick=handleAudioPlay()>
+        <button class="btn-equalizer btn-equalizer--black" id="btn-audio-play" type="button" aria-label="Еквалайзер"
+          onclick=handleAudioPlay()>
           <div class="equalizer">
             <i></i>
             <i></i>
@@ -148,28 +154,64 @@
           <div class="google__video-item">
             <div class="google__video-title-wrapper">
               <span class="google__title"><span class="point">●</span> Прорыв 2023</span>
-              <img class="google__video" width="260" height="146" src="../img/google-video1-prev.png" alt="Спикер">
+              <div class="google__video-player-wrapper">
+                <button class="google__play-btn" type="button" id="play-btn1" onclick=playVideo(this)>
+                  <svg class="" width="50" height="50">
+                    <use xlink:href="img/sprite.svg#play"></use>
+                  </svg>
+                </button>
+                <div class="google__video" style="padding:56.25% 0 0 0;position:relative;"><iframe id="video1"
+                    src="https://player.vimeo.com/video/797302849?h=930eca9db3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&controls=1"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="vid1"></iframe></div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+              </div>
             </div>
-            <p class="google__about">Пять столетий спустя Lorem Ipsum испытал всплеск популярности с выпуском сухого
-              переноса</p>
+            <blockquote class="google__about">ВЫ МОЖЕТЕ ИЗВЛЕЧЬ ИЗ ЭТОГО ВЫГОДУ В 10 РАЗ БОЛЬШЕ, ЧЕМ ВЫ ЗАРАБАТЫВАЕТЕ
+            </blockquote>
+            <cite>инвестор, Макс Хармози</cite>
             <span class="google__about-dot"></span>
           </div>
           <div class="google__video-item">
             <div class="google__video-title-wrapper">
               <span class="google__title"><span class="point">●</span> Простота</span>
-              <img class="google__video" width="260" height="146" src="../img/google-video2-prev.png" alt="Спикер">
+              <div class="google__video-player-wrapper">
+                <button class="google__play-btn" type="button" id="play-btn2" onclick=playVideo(this)>
+                  <svg class="" width="50" height="50">
+                    <use xlink:href="img/sprite.svg#play"></use>
+                  </svg>
+                </button>
+                <div class="google__video" style="padding:56.25% 0 0 0;position:relative;"><iframe id="video2"
+                    src="https://player.vimeo.com/video/797302778?h=930eca9db3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&controls=1"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="vid1"></iframe></div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+              </div>
             </div>
-            <p class="google__about">Пять столетий спустя Lorem Ipsum испытал всплеск популярности с выпуском<span
-                class="google__about-dot"></span></p>
+            <blockquote class="google__about">ИСКУССТВЕННЫЙ ИНТЕЛЛЕКТ УМНЕЕ НАС. В ТЕЧЕНИЕ ГОДА, МНОГИЕ ЛИШАТСЯ РАБОТЫ
+            </blockquote>
+            <cite>ученый, Джордан Питерсон</cite>
             <span class="google__about-dot"></span>
           </div>
           <div class="google__video-item">
             <div class="google__video-title-wrapper">
               <span class="google__title"><span class="point">●</span> Эффективность</span>
-              <img class="google__video" width="260" height="146" src="../img/google-video3-prev.png" alt="Спикер">
+              <div class="google__video-player-wrapper">
+                <button class="google__play-btn" type="button" id="play-btn3" onclick=playVideo(this)>
+                  <svg class="" width="50" height="50">
+                    <use xlink:href="img/sprite.svg#play"></use>
+                  </svg>
+                </button>
+                <div class="google__video" style="padding:56.25% 0 0 0;position:relative;"><iframe id="video3"
+                    src="https://player.vimeo.com/video/797302900?h=930eca9db3&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&controls=1"
+                    frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                    style="position:absolute;top:0;left:0;width:100%;height:100%;" title="vid1"></iframe></div>
+                <script src="https://player.vimeo.com/api/player.js"></script>
+              </div>
             </div>
-            <p class="google__about">Пять столетий спустя Lorem Ipsum испытал всплеск популярности с выпуском
-              сухого<span class="google__about-dot"></span></p>
+            <blockquote class="google__about">СТАНЕТ ВАШИМ ДРУГОМ, ПСИХОЛОГОМ, МАРКЕТОЛОГОМ, МАТЕМАТИКОМ, ИНВЕСТОРОМ
+            </blockquote>
+            <cite>инвестор, Web3nity</cite>
             <span class="google__about-dot"></span>
           </div>
         </div>
@@ -190,34 +232,43 @@
         </div>
         <div class="buttons buttons--amount">
           <div class="buttons__wrapper buttons__wrapper--p0">
-            <h3 class="buttons__subheading buttons__subheading--enlarged">Сделайте пассивный заработок простой задачей</h3>
+            <h3 class="buttons__subheading buttons__subheading--enlarged">Сделайте пассивный заработок простой задачей
+            </h3>
             <ul class="buttons__list">
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse buttons__btn--active" type="button" id="amount314" onclick=handle314BtnClick(this)>$314</button>
+                <button class="buttons__btn buttons__btn--reverse buttons__btn--active" type="button" id="amount314"
+                  onclick=handle314BtnClick(this)>$314</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount567" onclick=handle567BtnClick(this)>$567</button>
+                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount567"
+                  onclick=handle567BtnClick(this)>$567</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount980" onclick=handle980BtnClick(this)>$980</button>
+                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount980"
+                  onclick=handle980BtnClick(this)>$980</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount1092" onclick=handle1092BtnClick(this)>$1092</button>
+                <button class="buttons__btn buttons__btn--reverse" type="button" id="amount1092"
+                  onclick=handle1092BtnClick(this)>$1092</button>
               </li>
             </ul>
           </div>
         </div>
         <div class="amount__wrapper">
-          <span class="amount__number"><g>$</g><span id="nbr">314</span></span>
-          <img class="amount__img" src="../img/sam.png" width="517" height="471" alt="Спикер">
+          <span class="amount__number">
+            <g>$</g><span id="nbr">314</span>
+          </span>
+          <div class="amount__img-wrapper">
+            <img class="amount__img" src="../img/sam.png" width="517" height="471" alt="Спикер">
+          </div>
           <div class="amount__data-wrapper">
-              <div class="amount__data-row amount__data-row--head">
-                <span class="amount__data-title">Время</span>
-                <span class="amount__data-title">Актив</span>
-                <span class="amount__data-title">Вклад</span>
-                <span class="amount__data-title">ROI</span>
-              </div>
-              <div class="amount__data"></div>
+            <div class="amount__data-row amount__data-row--head">
+              <span class="amount__data-title">Время</span>
+              <span class="amount__data-title">Актив</span>
+              <span class="amount__data-title">Вклад</span>
+              <span class="amount__data-title">ROI</span>
+            </div>
+            <div class="amount__data"></div>
             <button class="amount__btn" type="button" onclick=handleNextDataBtnClick()>
               <svg class="amount__icon" width="30" height="30">
                 <use xlink:href="img/sprite.svg#arrow2"></use>
@@ -235,26 +286,32 @@
         </div>
 
         <div class="buttons">
-          <p class="buttons__content" id="potentialContent">Эти самообучающиеся программы стали важным инструментом в различных сферах
+          <p class="buttons__content" id="potentialContent">Эти самообучающиеся программы стали важным инструментом в
+            различных сферах
             бизнеса и жизни с момента своего появления</p>
           <div class="buttons__wrapper">
             <h3 class="buttons__subheading">Начните инвестировать уже сейчас в революционные продукты OpenAI, такие
               как</h3>
             <ul class="buttons__list">
               <li class="buttons__btn-item">
-                <button class="buttons__btn" type="button" id="ChatGPT" onclick=handlePotentialBtnClick(this)>ChatGPT</button>
+                <button class="buttons__btn" type="button" id="ChatGPT"
+                  onclick=handlePotentialBtnClick(this)>ChatGPT</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn" type="button" id="GPT3" onclick=handlePotentialBtnClick(this)>GPT-3</button>
+                <button class="buttons__btn" type="button" id="GPT3"
+                  onclick=handlePotentialBtnClick(this)>GPT-3</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn" type="button" id="DALLE2" onclick=handlePotentialBtnClick(this)>DALL-E 2</button>
+                <button class="buttons__btn" type="button" id="DALLE2" onclick=handlePotentialBtnClick(this)>DALL-E
+                  2</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn" type="button" id="Whisper" onclick=handlePotentialBtnClick(this)>Whisper</button>
+                <button class="buttons__btn" type="button" id="Whisper"
+                  onclick=handlePotentialBtnClick(this)>Whisper</button>
               </li>
               <li class="buttons__btn-item">
-                <button class="buttons__btn buttons__btn--active" type="button" id="EnterpriseGPT" onclick=handlePotentialBtnClick(this)>EnterpriseGPT</button>
+                <button class="buttons__btn buttons__btn--active" type="button" id="EnterpriseGPT"
+                  onclick=handlePotentialBtnClick(this)>EnterpriseGPT</button>
               </li>
             </ul>
           </div>
@@ -276,7 +333,7 @@
 
       <section class="promo">
         <div class="promo__wrapper">
-          <h2 class="promo__heading">Зарабатывайте на всех продуктах компании OpenAI</h2>
+          <h2 class="promo__heading">Зарабатывайте на всех продуктах компании&nbsp;OpenAI</h2>
           <div class="promo__users-wrapper">
             <div class="promo__users">
               <img class="promo__img" src="/img/users.png" width="182" height="138" alt="Монета">
@@ -287,11 +344,16 @@
                 </svg>
                 <span>За 5 дней</span>
                 <p class="promo__about">Посмотрите видео или запустите аудиопрезентацию, пока листаете официальный сайт
+                </p>
               </div>
-              </p>
             </div>
-            <div class="promo__video">
-              <img src="/img/video-prev.jpg" class="video" width="398" height="225" alt="Video">
+            <div class="promo__video-wrapper">
+              <div class="promo__video-bcg"></div>
+              <div class="promo__video" style="padding:56.25% 0 0 0;position:relative;"><iframe
+                  src="https://player.vimeo.com/video/797301531?h=a4e95be452&amp;badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479"
+                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;" title="egpt.mp4"></iframe></div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
             </div>
           </div>
         </div>
@@ -341,6 +403,7 @@
       </div>
     </footer>
   </div>
+  <div class="page-body__right-frame"></div>
 
   <template id="similar-data-row" style="display: none">
     <div class="amount__data-row">

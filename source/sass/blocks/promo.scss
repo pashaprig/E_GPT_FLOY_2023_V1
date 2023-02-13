@@ -45,7 +45,7 @@
   @media (max-width: $tablet-width) {
     &--form-wrapper {
       min-width: unset;
-      padding: 40px 0;
+      padding: 30px 0;
       padding-bottom: 0;
       background: 50% no-repeat url(../img/form-wrapper-bcg-mob.png);
       border-left: none;
@@ -56,6 +56,7 @@
 .promo__heading {
   display: flex;
   padding: 40px;
+  padding-right: 100px;
   font-weight: 700;
   font-size: 40px;
   line-height: 55px;
@@ -72,6 +73,7 @@
 .promo__users-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 30px;
   padding: 40px;
 
   @media (max-width: $tablet-width) {
@@ -81,6 +83,9 @@
 }
 
 .promo__users {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   max-width: 35%;
   @media (max-width: $tablet-width) {
     order: 2;
@@ -125,15 +130,23 @@
   }
 }
 
-.promo__video {
+.promo__video-wrapper {
+  flex-grow: 1;
   display: flex;
-  align-items: end;
+  align-items: center;
+  background: $basic-black;
+  border-radius: 16px;
 
   @media (max-width: $tablet-width) {
     margin-bottom: 25px;
-    img {
-      width: 100%;
-    }
+  }
+}
+
+.promo__video {
+  width: 100%;
+
+  & iframe {
+    border-radius: 16px;
   }
 }
 
