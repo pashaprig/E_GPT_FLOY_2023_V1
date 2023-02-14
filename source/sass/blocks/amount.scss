@@ -144,10 +144,10 @@
   position: relative;
   width: 500px;
 
- @media (max-width: $tablet-width) {
-  width: 100%;
-  height: 300px;
- }
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    height: 300px;
+  }
 }
 
 .amount__img {
@@ -162,6 +162,8 @@
   }
 }
 
+//Decode
+
 #nbr {
   min-height: 420px;
   @media (max-width: $tablet-width) {
@@ -170,6 +172,10 @@
 }
 
 @keyframes appearance {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }

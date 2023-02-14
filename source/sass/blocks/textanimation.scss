@@ -1,0 +1,92 @@
+//Infinity text line
+
+.textanimation {
+  overflow: hidden;
+  position: absolute;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  font-size: 17px;
+  line-height: 0;
+  color: $nav-color;
+  border-bottom: $regular-border;
+}
+
+.textanimation__content {
+  display: flex;
+  width: 100%;
+  margin: 0 auto;
+  white-space: nowrap;
+}
+
+.textanimation__element {
+  display: flex;
+  // /* Apply animation to this element */
+  -webkit-animation: scrolling-left1 20s linear infinite;
+  animation: scrolling-left1 20s linear infinite;
+}
+
+.textanimation__item {
+  display: flex;
+  align-items: center;
+  padding: 12px 15px;
+
+  &.BTC::before {
+    content: url(../img/btc.png);
+    margin-right: 12px;
+  }
+
+  &.LTC::before {
+    content: url(../img/ltc.png);
+    margin-right: 12px;
+  }
+
+  &.USDT::before {
+    content: url(../img/usdt.png);
+    margin-right: 12px;
+  }
+
+  &.XRP::before {
+    content: url(../img/xrp.png);
+    margin-right: 12px;
+  }
+
+  &.TRX::before {
+    content: url(../img/trx.png);
+    margin-right: 12px;
+  }
+
+  &.ETH::before {
+    content: url(../img/eth.png);
+    margin-right: 12px;
+  }
+
+  &.BNB::before {
+    content: url(../img/bnb.png);
+    margin-right: 12px;
+  }
+}
+
+.textanimation__amount {
+  &::before {
+    content: "$";
+  }
+}
+
+.textanimation__percent {
+  &::after {
+    content: "%";
+  }
+}
+
+@keyframes scrolling-left1 {
+  0% {
+    transform: translateX(0%);
+    -webkit-transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+    -webkit-transform: translateX(-100%);
+  }
+}
