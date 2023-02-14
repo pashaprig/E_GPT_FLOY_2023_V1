@@ -109,12 +109,16 @@
 }
 
 .promo__img {
+  width: 65%;
+  height: auto;
+  margin-top: auto;
   margin-bottom: 20px;
 
   @media (max-width: $tablet-width) {
     order: 2;
     width: 110px;
     height: 84px;
+    margin-top: 0;
     margin-bottom: 0;
   }
 }

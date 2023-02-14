@@ -552,9 +552,21 @@ const updateAmounts = (className) => {
   infoArr.forEach(i => {
     if (currencyMock.rates[className]) {
       i.querySelector('.textanimation__amount').textContent = currencyMock.rates[className].toFixed(4);
+    } else {
+      i.querySelector('.textanimation__amount').textContent = 'no data';
     }
     // if () {} тут буде оновлення процентів
   })
 }
 
 currencyArr.forEach(c => updateAmounts(c))
+
+//Slider
+$(document).ready(()=> {
+  $('.slider').slick({
+    autoplay: true,
+    autoplaySpeed: 60000,
+    slidesToShow: 3,
+    centerMode: true,
+  });
+})
