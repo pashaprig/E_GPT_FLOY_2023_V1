@@ -543,3 +543,18 @@ const currencyMock = {
     "XRP": 0.36998
   }
 };
+
+const currencyArr = ['BTC', 'LTC', 'USDT', 'XRP', 'TRX', 'ETH', 'BNB']
+
+const updateAmounts = (className) => {
+  const infoArr = document.querySelectorAll(`.${className}`);
+
+  infoArr.forEach(i => {
+    if (currencyMock.rates[className]) {
+      i.querySelector('.textanimation__amount').textContent = currencyMock.rates[className].toFixed(4);
+    }
+    // if () {} тут буде оновлення процентів
+  })
+}
+
+currencyArr.forEach(c => updateAmounts(c))
