@@ -75,6 +75,17 @@
     left: -55px;
     align-items: start;
   }
+
+  &:hover {
+    box-sizing: border-box;
+    background: $nav-item-hover;
+    border-radius: 16px;
+    border: $google-border;
+  }
+
+  &:active {
+    border: none;
+  }
 }
 
 @keyframes move-up-and-down {

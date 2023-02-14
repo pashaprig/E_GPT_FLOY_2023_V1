@@ -11,6 +11,10 @@
   line-height: 0;
   color: $nav-color;
   border-bottom: $regular-border;
+
+  @media (max-width: $tablet-width) {
+    font-size: 13px;
+  }
 }
 
 .textanimation__content {
@@ -34,37 +38,41 @@
 
   &.BTC::before {
     content: url(../img/btc.png);
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &.LTC::before {
     content: url(../img/ltc.png);
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &.USDT::before {
     content: url(../img/usdt.png);
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &.XRP::before {
     content: url(../img/xrp.png);
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &.TRX::before {
     content: url(../img/trx.png);
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &.ETH::before {
     content: url(../img/eth.png);
-    margin-right: 12px;
+    margin-right: 10px;
   }
 
   &.BNB::before {
     content: url(../img/bnb.png);
-    margin-right: 12px;
+    margin-right: 10px;
+  }
+
+  @media (max-width: $tablet-width) {
+    padding: 6px 10px;
   }
 }
 

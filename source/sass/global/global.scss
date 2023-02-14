@@ -1,5 +1,6 @@
 html {
   padding: 20px;
+  scroll-behavior: smooth;
 
   @media (max-width: $tablet-width) {
     padding: 0;

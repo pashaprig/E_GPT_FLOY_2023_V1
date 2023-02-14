@@ -93,6 +93,7 @@
   }
 
   @media (max-width: $tablet-width) {
+    margin-bottom: 15px;
     border-right: none;
   }
 }
@@ -143,8 +144,7 @@
   line-height: 22px;
 
   @media (max-width: $tablet-width) {
-    padding: 30px;
-    padding-top: 0;
+    padding: 0;
   }
 }
 
