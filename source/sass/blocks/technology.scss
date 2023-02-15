@@ -92,6 +92,7 @@
 
   @media (max-width: $tablet-width) {
     display: block;
+    width: 100%;
 
     &--order-2 {
       order: 2;

@@ -46,6 +46,11 @@
   border: 80px solid $basic-black;
   border-top: none;
   border-radius: 30px;
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    border: 20px solid $basic-black;
+  }
 }
 
 .ask__answer-block {
@@ -57,6 +62,8 @@
 
   &--active {
     display: block;
+    font-size: 16px;
+    line-height: 24px;
   }
 }
 
@@ -73,6 +80,14 @@
     margin-left: -80px;
     padding: 0 80px;
     background: $answer-bcg;
+  }
+
+  @media (max-width: $tablet-width) {
+    &--light-bcg {
+      margin-right: -20px;
+      margin-left: -20px;
+      padding: 0 20px;
+    }
   }
 }
 
@@ -101,6 +116,10 @@
     font-size: 36px;
     line-height: 57px;
   }
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
 }
 
 .ask__text-wrapper {
@@ -110,10 +129,20 @@
   min-height: 100%;
   padding: 47px 0;
   border-left: 1px solid #2E2E2E;
+
+  @media (max-width: $tablet-width) {
+    border-left: none;
+    padding: 15px 0;
+  }
 }
 
 .ask__text {
   margin-left: 30px;
+
+  @media (max-width: $tablet-width) {
+    margin-left: 0;
+    text-align: left;
+  }
 }
 
 .ask__form {
@@ -123,11 +152,13 @@
   padding: 40px 60px;
   border-top: 80px solid $basic-black;
   background: transparent;
+  border-radius: 30px;
 
   @media (max-width: $tablet-width) {
     box-sizing: border-box;
     padding: 20px;
     width: 100%;
+    border-top: none;
   }
 
   & input {
@@ -159,6 +190,10 @@
 
     &:disabled:hover {
       opacity: unset;
+    }
+
+    @media (max-width: $tablet-width) {
+      right: 20px;
     }
   }
 }
