@@ -41,18 +41,93 @@
   }
 }
 
-.ask__form {
-  padding: 50px;
+.ask__answer-wraper {
   width: 60%;
   border: 80px solid $basic-black;
+  border-top: none;
   border-radius: 30px;
+}
+
+.ask__answer-block {
+  display: none;
+  font-size: 18px;
+  line-height: 28px;
+  color: $nav-color;
+  background: $basic-black;
+
+  &--active {
+    display: block;
+  }
+}
+
+.ask__answer-row {
+  display: flex;
+  align-items: center;
+
+  &:first-child {
+    padding-top: 0;
+  }
+
+  &--light-bcg {
+    margin-right: -80px;
+    margin-left: -80px;
+    padding: 0 80px;
+    background: $answer-bcg;
+  }
+}
+
+.ask__grapf {
+  box-sizing: border-box;
+  align-self: flex-start;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 57px;
+  min-height: 57px;
+  margin: 32px;
+  margin-left: 0;
+  color: $basic-black;
+
+  &--red {
+    background: $answer-red-bcg;
+  }
+
+  &--green {
+    background: $answer-green-bcg;
+  }
+
+  & span {
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 57px;
+  }
+}
+
+.ask__text-wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  min-height: 100%;
+  padding: 47px 0;
+  border-left: 1px solid #2E2E2E;
+}
+
+.ask__text {
+  margin-left: 30px;
+}
+
+.ask__form {
+  box-sizing: border-box;
+  position: relative;
+  width: 100%;
+  padding: 40px 60px;
+  border-top: 80px solid $basic-black;
   background: transparent;
 
   @media (max-width: $tablet-width) {
     box-sizing: border-box;
     padding: 20px;
     width: 100%;
-    border: 20px solid $basic-black;
   }
 
   & input {
@@ -62,5 +137,28 @@
     background: $basic-white;
     border: 3px solid $basic-black;
     border-radius: 6px;
+  }
+
+  & button[type="submit"] {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 60px;
+    width: unset;
+    background: none;
+
+    & svg {
+      fill: $nav-item-hover;
+    }
+
+    &:disabled {
+      & svg {
+        fill: lightgray;
+      }
+    }
+
+    &:disabled:hover {
+      opacity: unset;
+    }
   }
 }

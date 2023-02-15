@@ -570,3 +570,34 @@ $(document).ready(()=> {
     centerMode: true,
   });
 })
+
+//Ai submit
+const askForm = document.querySelector('#ask-form');
+const answerBlock = document.querySelector('.ask__answer-block')
+const input = askForm.querySelector('#question');
+const sbmBtn = askForm.querySelector('button');
+
+const answer = 'Прикладной ИИ, который, основан на проверенных и развитых технологиях, имеет жизнеспособное применение в большем количестве отраслей и находится ближе к состоянию массового внедрения, чем другие тенденции. В глобальном опросе о состоянии ИИ, проведенном в 2021 году, 56% респондентов заявили, что их организации внедрили ИИ, по сравнению с 50% в опросе 2020 года. Согласно отчету за 2022 год, по внедрению ИИ лидируют технологические отрасли, а разработка продуктов и сервисные операции являются бизнес-функциями, которые получили наибольшую выгоду от применения ИИ.'
+
+
+input.addEventListener('keyup', (e) => {
+  if (e.target.value) {
+    sbmBtn.removeAttribute('disabled');
+  } else {
+    sbmBtn.setAttribute("disabled", "disabled");
+  }
+})
+
+askForm.addEventListener('submit', (event) => {
+  event.preventDefault();
+  const question = input.value;
+
+  const questionField = answerBlock.querySelector('#question-to-parse');
+  questionField.textContent = question;
+
+  const answerField = answerBlock.querySelector('#answer-to-parse');
+  answerField.textContent = answer;
+
+  answerBlock.classList.add('ask__answer-block--active');
+  console.log('AI asked');
+});

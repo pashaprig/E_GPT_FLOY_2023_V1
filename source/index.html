@@ -265,9 +265,34 @@
       <section class="ask" id="ask">
         <h2 class="ask__heading">Задайте ИИ ChatGPT вопрос</h2>
         <p class="ask__about">ИИ ответит на 3 запроса о том, что вас интересует</p>
-        <form class="ask__form" action="">
-          <input type="text" name="" id="" placeholder="Введите текст вопроса...">
-        </form>
+        <div class="ask__answer-wraper">
+          <div class="ask__answer-block">
+            <div class="ask__answer-row">
+              <div class="ask__grapf ask__grapf--red">
+                <span>T</span>
+              </div>
+              <div class="ask__text-wrapper">
+                <p class="ask__text" id="question-to-parse">Ваш вопрос</p>
+              </div>
+            </div>
+            <div class="ask__answer-row ask__answer-row--light-bcg">
+              <div class="ask__grapf ask__grapf--green">
+                <img src="img/small-logo.png" width="37" height="37" alt="small-logo">
+              </div>
+              <div class="ask__text-wrapper">
+                <p class="ask__text" id="answer-to-parse">Ответ на вопрос</p>
+              </div>
+            </div>
+          </div>
+          <form class="ask__form" id="ask-form">
+            <input type="text" name="" id="question" placeholder="Введите текст вопроса...">
+            <button type="submit" disabled>
+              <svg class="ask__icon" width="21" height="19">
+                <use xlink:href="img/sprite.svg#arrow3"></use>
+              </svg>
+            </button>
+          </form>
+        </div>
       </section>
 
       <section class="amount" id="amount">
@@ -276,49 +301,63 @@
             <div class="textanimation__content">
               <div class="textanimation__element">
                 <div class="textanimation__item BTC">
-                  <p>Bitcoin (BTC) <span class="textanimation__amount">16739</span> <span class="textanimation__percent">12.58</span></p>
+                  <p>Bitcoin (BTC) <span class="textanimation__amount">16739</span> <span
+                      class="textanimation__percent">12.58</span></p>
                 </div>
                 <div class="textanimation__item LTC">
-                  <p>Litecoin (LTC) <span class="textanimation__amount">90.91</span> <span class="textanimation__percent">1.21</span></p>
+                  <p>Litecoin (LTC) <span class="textanimation__amount">90.91</span> <span
+                      class="textanimation__percent">1.21</span></p>
                 </div>
                 <div class="textanimation__item USDT">
-                  <p>Tether (USDT) <span class="textanimation__amount">0.98</span> <span class="textanimation__percent">0.07</span></p>
+                  <p>Tether (USDT) <span class="textanimation__amount">0.98</span> <span
+                      class="textanimation__percent">0.07</span></p>
                 </div>
                 <div class="textanimation__item XRP">
-                  <p>XRP (XRP) <span class="textanimation__amount">0.34</span> <span class="textanimation__percent">7.38</span></p>
+                  <p>XRP (XRP) <span class="textanimation__amount">0.34</span> <span
+                      class="textanimation__percent">7.38</span></p>
                 </div>
                 <div class="textanimation__item TRX">
-                  <p>Tron (TRX) <span class="textanimation__amount">0.0549</span> <span class="textanimation__percent">0.26</span></p>
+                  <p>Tron (TRX) <span class="textanimation__amount">0.0549</span> <span
+                      class="textanimation__percent">0.26</span></p>
                 </div>
                 <div class="textanimation__item ETH">
-                  <p>Ethereum (ETH) <span class="textanimation__amount">12.30</span> <span class="textanimation__percent">0.25</span></p>
+                  <p>Ethereum (ETH) <span class="textanimation__amount">12.30</span> <span
+                      class="textanimation__percent">0.25</span></p>
                 </div>
                 <div class="textanimation__item BNB">
-                  <p>BNB (BNB) <span class="textanimation__amount">90.91</span> <span class="textanimation__percent">0.325</span></p>
+                  <p>BNB (BNB) <span class="textanimation__amount">90.91</span> <span
+                      class="textanimation__percent">0.325</span></p>
                 </div>
               </div>
 
               <div class="textanimation__element">
                 <div class="textanimation__item BTC">
-                  <p>Bitcoin (BTC) <span class="textanimation__amount">16739</span> <span class="textanimation__percent">12.58</span></p>
+                  <p>Bitcoin (BTC) <span class="textanimation__amount">16739</span> <span
+                      class="textanimation__percent">12.58</span></p>
                 </div>
                 <div class="textanimation__item LTC">
-                  <p>Litecoin (LTC) <span class="textanimation__amount">90.91</span> <span class="textanimation__percent">1.21</span></p>
+                  <p>Litecoin (LTC) <span class="textanimation__amount">90.91</span> <span
+                      class="textanimation__percent">1.21</span></p>
                 </div>
                 <div class="textanimation__item USDT">
-                  <p>Tether (USDT) <span class="textanimation__amount">0.98</span> <span class="textanimation__percent">0.07</span></p>
+                  <p>Tether (USDT) <span class="textanimation__amount">0.98</span> <span
+                      class="textanimation__percent">0.07</span></p>
                 </div>
                 <div class="textanimation__item XRP">
-                  <p>XRP (XRP) <span class="textanimation__amount">0.34</span> <span class="textanimation__percent">7.38</span></p>
+                  <p>XRP (XRP) <span class="textanimation__amount">0.34</span> <span
+                      class="textanimation__percent">7.38</span></p>
                 </div>
                 <div class="textanimation__item TRX">
-                  <p>Tron (TRX) <span class="textanimation__amount">0.0549</span> <span class="textanimation__percent">0.26</span></p>
+                  <p>Tron (TRX) <span class="textanimation__amount">0.0549</span> <span
+                      class="textanimation__percent">0.26</span></p>
                 </div>
                 <div class="textanimation__item ETH">
-                  <p>Ethereum (ETH) <span class="textanimation__amount">12.30</span> <span class="textanimation__percent">0.25</span></p>
+                  <p>Ethereum (ETH) <span class="textanimation__amount">12.30</span> <span
+                      class="textanimation__percent">0.25</span></p>
                 </div>
                 <div class="textanimation__item BNB">
-                  <p>BNB (BNB) <span class="textanimation__amount">90.91</span> <span class="textanimation__percent">0.325</span></p>
+                  <p>BNB (BNB) <span class="textanimation__amount">90.91</span> <span
+                      class="textanimation__percent">0.325</span></p>
                 </div>
               </div>
             </div>
@@ -423,7 +462,7 @@
         <div class="openai__slider">
           <div class="slider">
             <div class="slider__item">
-              <img src="img/" alt="">
+              <img src="" alt="">
             </div>
             <div class="slider__item">
               <div class="">22222222222222222222222</div>
