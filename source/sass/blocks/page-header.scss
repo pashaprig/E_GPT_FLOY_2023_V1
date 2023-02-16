@@ -10,6 +10,12 @@
   padding: 10px 130px 10px;
   border-bottom: $regular-border;
 
+  & a {
+    display: flex;
+    align-items: center;
+    z-index: 1;
+  }
+
   @media (max-width: $tablet-width) {
     max-height: 40px;
     margin-right: 0;

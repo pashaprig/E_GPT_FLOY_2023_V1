@@ -90,6 +90,11 @@
     line-height: 24px;
     color: $nav-color;
     text-decoration: underline;
+
+    &.current {
+      opacity: 0.5;
+      text-decoration: none;
+    }
   }
 
   @media (max-width: $tablet-width) {
@@ -125,7 +130,7 @@
     align-items: center;
     gap: 40px;
 
-  a {
+  & a {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -133,6 +138,7 @@
     padding: 12px 24px;
     font-size: 16px;
     line-height: 20px;
+    color: $basic-black;
     background: $basic-white;
     border-radius: 50px;
   }

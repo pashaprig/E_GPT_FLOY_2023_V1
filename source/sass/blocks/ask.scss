@@ -152,13 +152,13 @@
   padding: 40px 60px;
   border-top: 80px solid $basic-black;
   background: transparent;
-  border-radius: 30px;
 
   @media (max-width: $tablet-width) {
     box-sizing: border-box;
     padding: 20px;
     width: 100%;
     border-top: none;
+    border-radius: 30px;
   }
 
   & input {

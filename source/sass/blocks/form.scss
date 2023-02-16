@@ -35,6 +35,10 @@ input {
   border: none;
   border-radius: 3px;
 
+  &:disabled {
+    color: lightgray;
+  }
+
   @media (max-width: $tablet-width) {
     width: 100%;
   }
